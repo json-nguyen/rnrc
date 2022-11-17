@@ -16,7 +16,7 @@ TENOR_API_KEY = os.getenv('TENOR_KEY')
 intents = discord.Intents.all()
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='!', intents=intents, case_insensitive=True)
 
 @bot.event
 async def on_ready():
